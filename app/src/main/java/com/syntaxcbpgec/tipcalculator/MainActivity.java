@@ -43,10 +43,10 @@ public class MainActivity extends AppCompatActivity {
 
                 int bill= Integer.parseInt(billAmount.getText().toString());
                 tipPercent.setText("10%");
-                int tipTotalana = 10/100*bill;
-                tipTotal.setText(tipTotalana);
+                int tipTotalana = (10/100)*bill;
+                tipTotal.setText(""+tipTotalana);
                 int totalBillana = tipTotalana + bill;
-                totalBill.setText(totalBillana);
+                totalBill.setText(""+totalBillana);
 
 
             }
@@ -62,9 +62,9 @@ public class MainActivity extends AppCompatActivity {
                 int bill= Integer.parseInt(billAmount.getText().toString());
                 tipPercent.setText("15%");
                 int tipTotalana = 15/100*bill;
-                tipTotal.setText(tipTotalana);
+                tipTotal.setText(""+tipTotalana);
                 int totalBillana = tipTotalana + bill;
-                totalBill.setText(totalBillana);
+                totalBill.setText(""+totalBillana);
 
 
             }
@@ -78,9 +78,9 @@ public class MainActivity extends AppCompatActivity {
                 int bill= Integer.parseInt(billAmount.getText().toString());
                 tipPercent.setText("20%");
                 int tipTotalana = 20/100*bill;
-                tipTotal.setText(tipTotalana);
+                tipTotal.setText("" + tipTotalana);
                 int totalBillana = tipTotalana + bill;
-                totalBill.setText(totalBillana);
+                totalBill.setText("" + totalBillana);
 
 
             }
