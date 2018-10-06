@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         totalBill = findViewById(R.id.totalBill);
 
         bad = findViewById(R.id.bad);
-        average = findViewById(R.id.average);
+        average = (ImageButton) findViewById(R.id.average);
         best = findViewById(R.id.best);
 
         billAmount = findViewById(R.id.billAmount);
@@ -43,10 +43,10 @@ public class MainActivity extends AppCompatActivity {
 
                 int bill= Integer.parseInt(billAmount.getText().toString());
                 tipPercent.setText("10%");
-                int tipTotalana = (10/100)*bill;
-                tipTotal.setText(""+tipTotalana);
-                int totalBillana = tipTotalana + bill;
-                totalBill.setText(""+totalBillana);
+                double tipTotalana = (REGULAR_TIP_PERCENTAGE/100)*bill;
+                tipTotal.setText(" "+tipTotalana);
+                double totalBillana = tipTotalana + bill;
+                totalBill.setText(" "+totalBillana);
 
 
             }
@@ -61,9 +61,9 @@ public class MainActivity extends AppCompatActivity {
 
                 int bill= Integer.parseInt(billAmount.getText().toString());
                 tipPercent.setText("15%");
-                int tipTotalana = 15/100*bill;
-                tipTotal.setText(""+tipTotalana);
-                int totalBillana = tipTotalana + bill;
+                double tipTotalana = (DEFAULT_TIP_PERCENTAGE/100)*bill;
+                tipTotal.setText(" "+tipTotalana);
+                double totalBillana = tipTotalana + bill;
                 totalBill.setText(""+totalBillana);
 
 
@@ -77,10 +77,12 @@ public class MainActivity extends AppCompatActivity {
 
                 int bill= Integer.parseInt(billAmount.getText().toString());
                 tipPercent.setText("20%");
-                int tipTotalana = 20/100*bill;
-                tipTotal.setText("" + tipTotalana);
-                int totalBillana = tipTotalana + bill;
-                totalBill.setText("" + totalBillana);
+                double tipTotalana = (EXCELLENT_TIP_PERCENTAGE/100)*bill;
+
+
+                tipTotal.setText(" " + tipTotalana);
+                double totalBillana = tipTotalana + bill;
+                totalBill.setText(" " + totalBillana);
 
 
             }
@@ -88,4 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+
 }
